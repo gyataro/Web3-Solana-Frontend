@@ -72,6 +72,7 @@ export default function Buy({ itemID }) {
         const item = await fetchItem(itemID);
         setItem(item);
         console.log("Address has already purchased this item!");
+        console.log(item);
       }
     }
     checkPurchased();
@@ -130,18 +131,15 @@ export default function Buy({ itemID }) {
   }
 
   return (
-    <div>
-      {status === STATUS.Paid ? (
-        <IPFSDownload hash={item.hash} filename={item.filename} />
-      ) : (
-        <button
-          disabled={loading}
-          className="buy-button"
-          onClick={processTransaction}
-        >
-          Buy now 🠚
-        </button>
-      )}
+    <div>	
+      {/* Display either buy button or IPFSDownload component based on if Hash exists */}	
+      {item ? (	
+        <IPFSDownload hash={item.hash} filename={item.filename} />	
+      ) : (	
+        <button disabled={loading} className="buy-button" onClick={processTransaction}>	
+          Buy now 🠚	
+        </button>	
+      )}	
     </div>
   );
 }
