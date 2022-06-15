@@ -23,7 +23,7 @@ const App = ({ Component, pageProps }) => {
 
   // choices: [Devnet, Testnet, Mainnet]
   // generate an RPC endpoint based on the network provided
-  const network = WalletAdapterNetwork.Devnet;
+  const network = WalletAdapterNetwork.Mainnet;
   const endpoint = useMemo(() => clusterApiUrl(network), [network]);
 
   // @solana/wallet-adapter-wallets includes all the adapters but supports tree shaking and lazy loading --
