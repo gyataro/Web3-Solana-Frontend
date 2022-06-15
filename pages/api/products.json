@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "name": "Unicorn Fairy Dust",
+        "price": "0.08",
+        "description": "Fairy dust extracted from unicorns in the imaginary universe. You can do anything with it, works just great as glitter.",
+        "image_url": "https://i.imgur.com/rVD8bjt.png",
+        "filename": "unicorn.zip",
+        "hash": "QmX6GH5wYCNcBqehNCx7XLqHa1kQX8nAKhAJ6bsev9fsaX"
+    }
+]
